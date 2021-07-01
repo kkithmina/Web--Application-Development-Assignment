@@ -71,3 +71,55 @@ body{
     text-align: center;
     opacity: 0.6;
 }
+.btns{
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btns .btn1{
+    width: 140px;
+    margin: 0 0.5rem;
+    padding: 0.8rem 0;
+    font-family: inherit;
+    font-size: 1.15rem;
+    border: none;
+    background-color: rgb(234, 250, 255);
+    color: rgb(2, 30, 61);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    letter-spacing: 0.5px;
+}
+.btns .btn:hover{
+    outline: 0;
+    opacity: 0.9;
+}
+.btns .btn:focus{
+    outline: 0;
+}
+#bmi_us, #bmi_mc{
+    display: none;
+}
+
+.show_bmi{
+    display: block!important;
+}
+.alert_error{
+    text-align: center;
+    padding: 1rem 1.6rem 0;
+    color: whitesmoke;
+    display: none;
+}
+.bmi_result{
+    padding: 1rem 1.6rem;
+    text-align: center;
+}
+#bmi_value{
+    padding-bottom: 0.4rem;
+}
+#bmi_category{
+    color: rgb(250, 248, 248);
+}
+#bmi_gender{
+    text-transform: capitalize;
+}
