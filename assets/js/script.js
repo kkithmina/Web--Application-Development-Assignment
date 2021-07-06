@@ -17,3 +17,10 @@ CLR_BTN.addEventListener('click', () => {
     forms.forEach(form => form.reset());
     clearBMIInfo();
 });
+
+// clear BMI Info
+function clearBMIInfo(){
+    document.getElementById('bmi_value').innerHTML = "";
+    document.getElementById('bmi_category').innerHTML = "";
+    document.getElementById('bmi_gender').innerHTML = "";
+}
