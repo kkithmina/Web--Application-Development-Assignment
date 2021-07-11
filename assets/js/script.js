@@ -24,3 +24,25 @@ function clearBMIInfo(){
     document.getElementById('bmi_category').innerHTML = "";
     document.getElementById('bmi_gender').innerHTML = "";
 }
+
+// bmi calculation form toggle
+BMI_HEADS.forEach(bmiHead => {
+    bmiHead.addEventListener('click', () => {
+        if(bmiHead.id === "us_head"){
+            removeActiveClass();
+            clearBMIInfo();
+            bmiHead.classList.add('form1');
+            BMI_SI.classList.remove('show_bmi');
+            BMI_USC.classList.add('show_bmi');
+            activeForm = "bmi_us";
+        }
+        if(bmiHead.id === "mc_head"){
+            removeActiveClass();
+            clearBMIInfo();
+            bmiHead.classList.add('form1');
+            BMI_USC.classList.remove('show_bmi');
+            BMI_SI.classList.add('show_bmi');
+            activeForm = "bmi_mc";
+        }
+    });
+});
