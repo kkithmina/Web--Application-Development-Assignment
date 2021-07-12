@@ -46,3 +46,16 @@ BMI_HEADS.forEach(bmiHead => {
         }
     });
 });
+
+// remove active class from heads
+function removeActiveClass(){
+    BMI_HEADS.forEach(bmiHead => {
+        bmiHead.classList.remove('form1');
+    });
+}
+
+// main bmi calculation function
+function performBMICalc(){
+    let BMIInfo = getUserInput();
+    if(BMIInfo) printBMIResult(BMIInfo);
+}
