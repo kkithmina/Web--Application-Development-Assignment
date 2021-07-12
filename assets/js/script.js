@@ -59,3 +59,26 @@ function performBMICalc(){
     let BMIInfo = getUserInput();
     if(BMIInfo) printBMIResult(BMIInfo);
 }
+
+// get input values
+function getUserInput(){
+    let status;
+    // get input values from us units
+    if(activeForm === "bmi_us"){
+        let age = document.getElementById('age1').value,
+        gender = document.querySelector('#bmi_us input[name = "gender"]:checked').value,
+        heightFeet = document.getElementById('height_feet').value,
+        heightInches = document.getElementById('height_inches').value,
+        weightPounds = document.getElementById('weight_pounds').value;
+
+        status = checkInputStatus([age, heightFeet, heightInches, weightPounds]);
+
+        if(status == true){
+            return calculateBMI({
+                gender,
+                age, 
+                height: parseFloat(heightFeet) * 12 + parseFloat(heightInches),
+                weight: parseFloat(weightPounds)
+            });
+        }
+    }
