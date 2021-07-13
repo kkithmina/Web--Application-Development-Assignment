@@ -82,3 +82,36 @@ function getUserInput(){
             });
         }
     }
+
+    // get input values form metric units
+    if(activeForm === "bmi_mc"){
+        let age = document.getElementById('age2').value,
+        gender = document.querySelector('#bmi_mc input[name = "gender"]:checked').value,
+        heightCm = document.getElementById('height_cm').value,
+        weightKg = document.getElementById('weight_kg').value;
+
+        status = checkInputStatus([age, heightCm, weightKg]);
+
+        if(status === true){
+            return calculateBMI({
+                gender,
+                age,
+                height: parseFloat(heightCm) / 100,
+                weight: parseFloat(weightKg)
+            });
+        }
+    }
+
+    document.querySelector('.alert_error').style.display = "block";
+    setTimeout(() => {
+        document.querySelector('.alert_error').style.display = "none";
+    }, 1000);
+    return false;
+}
+
+function checkInputStatus(inputs){
+    for(let i = 0; i < inputs.length; i++){
+        if(inputs[i].trim() === "" || isNaN(inputs[i])) return false;
+    }
+    return true;
+}
