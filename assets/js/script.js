@@ -115,3 +115,14 @@ function checkInputStatus(inputs){
     }
     return true;
 }
+
+// calculate BMI Value
+function calculateBMI(values){
+    let BMI;
+    if(activeForm === 'bmi_us'){
+        BMI = (703 * (values.weight / Math.pow(values.height, 2))).toFixed(2);
+    } else {
+        BMI = (values.weight / Math.pow(values.height, 2)).toFixed(2);
+    }
+    return {gender: values.gender, BMI};
+}
