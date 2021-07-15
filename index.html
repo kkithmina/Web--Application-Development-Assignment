@@ -1,4 +1,228 @@
-<div class="container my-5">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <title> MEDICALK |Home</title>   
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        background-color: #f1f1f1;
+      }
+      
+      #regForm {
+        background-color: #ffffff;
+        margin: 100px auto;
+        font-family: Raleway;
+        padding: 40px;
+        width: 70%;
+        min-width: 300px;
+      }
+      
+      h1 {
+        text-align: center;  
+      }
+      
+      input {
+        padding: 10px;
+        width: 100%;
+        font-size: 17px;
+        font-family: Raleway;
+        /* border: 1px solid #aaaaaa; */
+      }
+      
+      
+      
+      /* Hide all steps by default: */
+      .tab {
+        display: none;
+      }
+      
+      button {
+        background-color: #04AA6D;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Raleway;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        opacity: 0.8;
+      }
+      
+      #prevBtn {
+        background-color: #bbbbbb;
+      }
+      
+      /* Make circles that indicate the steps of the form: */
+      .step {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbbbbb;
+        border: none;  
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.5;
+      }
+      
+      .step.active {
+        opacity: 1;
+      }
+      
+      /* Mark the steps that are finished and valid: */
+      .step.finish {
+        background-color: #04AA6D;
+      }
+      </style>
+
+</head>
+<body>
+  
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <div class="icon-bar">
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+    <a href="#" class="email"><i class="fa fa-envelope"></i></a> 
+    <!-- <a href="#" class="google"><i class="fa fa-google"></i></a>  -->
+    <a href="#" class="phone"><i class="fa fa-phone"></i></a>
+    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+  </div>
+    <!-- <nav id="navbar-example2" class="navbar fixed-top navbar-expand-lg navbar-light bg-light px-3 " style="height: 50px;" right>
+        <a class="navbar-brand" href="#"><img src="./demo-logo.png"></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav nav-pills form-inline my-2 my-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#scrollspyHeading1">COVID-19</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#scrollspyHeading2">Health Calculators</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#scrollspyHeading3">Take Mental Test</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#scrollspyHeading4">HIV Info Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#scrollspyHeading5">Health Tips</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#scrollspyHeading6">Counsiling Reservation</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#scrollspyHeading7">Well-Being Forum</a>
+                </li>
+              </ul>
+        </div> 
+      </nav> -->
+
+      <nav id="navbar-example2" class="navbar fixed-top navbar-expand-lg navbar-light bg-light px-3 " style="height: 50px;" right>
+        <a class="navbar-brand bg-light" href="#"> MedicareLK</a>
+
+        
+        <div class="container-fluid bg-light ">
+          <div class="navbar-header">
+          </div>
+        
+          <ul class="nav navbar-nav navbar-right" style="font-family: Arial, Helvetica, sans-serif;color:black;">
+            <li class="nav-item">
+              <a class="nav-link " href="#scrollspyHeading1">COVID-19</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#scrollspyHeading2">Health Calculators</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#scrollspyHeading3">Take Mental Test</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#scrollspyHeading4">HIV Info Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#scrollspyHeading5">Health Tips</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#scrollspyHeading6">Counsiling Reservation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#scrollspyHeading7">Well-Being Forum</a>
+            </li>
+          </ul>
+
+        </div>
+        
+      </nav>
+
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        <section id = "scrollspyHeading1" >
+          <!-- <div style="background-color:  teal;height: 50px;width: 100%; margin-top: -50px;" ><h5 style="margin-left: 63%;color: white;" >Need Help Booking    +94 71 6600175    info@gmail.com</h5></div> -->
+          <!-- <div class="row mb-3" >
+            <div class="col-md-4 themed-grid-col"><h5 style="margin-left: 33%;color: white;" >Need Help Booking ?</h5></div>
+            <div class="col-md-4 themed-grid-col"><h5 style="margin-left: 33%;color: white;" >+94 41 300 3007</h5></div>
+            <div class="col-md-4 themed-grid-col"><h5 style="margin-left: 33%;color: white;" >info@medicalk.com</h5></div>
+          </div> -->
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm-6"><img src="./assets/images/careers.png" class="img-fluid" alt="..." style="margin-top: 0px;"></div>
+                  <div class="col-sm-6">
+                    <div class="card" style="margin-top: 200px;">
+                      <h5 class="card-header text-white bg-dark" >COVID-19 : Live Situational Analysis Dashboard of Sri Lanka</h5>
+                      <div class="card-body bg-light">
+                        <!-- <h5 class="card-title">Special title treatment</h5> -->
+                        <p class="card-text"> Please Note, Daily count of COVID-19 confirmed cases and deaths reported to <b>WHO</b>
+                            headquaters on Saturdays and Sundays will be updated on this dashboard on the subsequent Monday.
+                            Pleasse click below button for further information.</p>
+                        <a href="https://hpb.health.gov.lk/covid19-dashboard/" class="btn btn-info text-white bg-dark">COVID-19 Updates</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+              <img src="./assets/images/wave1.png">
+              <img src="./assets/images/wave2.png">
+          
+          </section>
+  <section id="scrollspyHeading2" style="background-color: teal;">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="h-100 p-5 text-white bg-dark rounded-3" >
+          <h2>Calculate Your Body Mask Index</h2>
+          <p>Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women. Click  below "Calculate BMI" button to compute your BMI index .</p>
+         <a href="./bmi.html"> <button class="btn btn-outline-light" type="button" >Calculate BMI</button></a>
+        </div>
+      </div>
+      <div class="col-sm-6">  
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+          <h2>Waist-to-hip ratio</h2>
+          <p>Waist-to-hip ratio (WHR) is one of several measurements your doctor can use to see if you’re overweight.WHR measures the ratio of your waist circumference to your hip circumference. It determines how much fat is stored on your waist, hips, and buttocks.</p>
+          <a href="./ratio.html"><button class="btn btn-outline-light" type="button">Calculate WHR</button></a>
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+<section id="scrollspyHeading3">
+  <div class="b-example-divider"></div>
+  
+  <div class="container my-5">
     <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
       <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
         <h1 class="display-4 fw-bold lh-1">Take a Mental Health Test</h1>
@@ -14,3 +238,9 @@
        </div>
       </div>
    </div>
+
+
+
+
+           
+

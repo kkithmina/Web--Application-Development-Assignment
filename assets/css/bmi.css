@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+:root{
+    --magenta: #036e75;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(0, 94, 122);
+    font-size: 1.2rem;
+    color: whitesmoke;
+}
+.parent_div{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+
+}
+.child_div{
+    width: 60vw;
+    height: 80vh;
+    background-image: linear-gradient(to bottom, #66ccff 0%, #000066 100%);
+}
+.head{
+    background: rgb(1, 58, 95);
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.head .form2{
+    padding: 1rem 1.6rem;
+    width: 100%;
+    cursor: pointer;
+}
+.form1{
+    background: rgb(0, 160, 218);
+}
+.form_dtls{
+    padding: 2rem;
+}
+.lbl1{
+    padding: 0.55rem 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+.lbl2{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
+}
+.form_cntrl{
+    width: 100%;
+    font-size: 1.15rem;
+    font-family: inherit;
+    padding: 0.6rem 1.2rem;
+    margin: 0.2rem 0;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.form_cntrl:focus{
+    outline: 0;
+}
+.form_cntrl::placeholder{
+    text-align: center;
+    opacity: 0.6;
+}
+.btns{
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btns .btn1{
+    width: 140px;
+    margin: 0 0.5rem;
+    padding: 0.8rem 0;
+    font-family: inherit;
+    font-size: 1.15rem;
+    border: none;
+    background-color: rgb(234, 250, 255);
+    color: rgb(2, 30, 61);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    letter-spacing: 0.5px;
+}
+.btns .btn:hover{
+    outline: 0;
+    opacity: 0.9;
+}
+.btns .btn:focus{
+    outline: 0;
+}
+#bmi_us, #bmi_mc{
+    display: none;
+}
+
+.show_bmi{
+    display: block!important;
+}
+.alert_error{
+    text-align: center;
+    padding: 1rem 1.6rem 0;
+    color: whitesmoke;
+    display: none;
+}
+.bmi_result{
+    padding: 1rem 1.6rem;
+    text-align: center;
+}
+#bmi_value{
+    padding-bottom: 0.4rem;
+}
+#bmi_category{
+    color: rgb(250, 248, 248);
+}
+#bmi_gender{
+    text-transform: capitalize;
+}
