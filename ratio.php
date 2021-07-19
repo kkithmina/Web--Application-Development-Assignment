@@ -70,3 +70,29 @@
 				font-size: 12px;
 				font-family: inherit;
 			}
+</style>
+	<script type="text/javascript">
+		function WHR() {
+			var h=document.getElementById('h').value;
+			var w=document.getElementById('w').value;
+			var whr=w/h;
+			var whro=(whr.toFixed(2));
+
+			document.getElementById("result").innerHTML="Your Ratio is " + whro;
+		}
+	</script>
+	<body>
+		<div>
+			<h2> Waist Hip Ratio Calculator</h2>
+			<p class="text">Waist</p>
+			<input type="text" id="h">
+			<p class="text">Hips</p>
+			<input type="text" id="w">
+			<p id="result"></p>
+			<button id="btn" onClick="WHR()">Calculate</button>
+			<p id="info">Please enter Waist [cm] and hips [cm]</p>
+		</div>
+	</body>
+</html>
+
+			
