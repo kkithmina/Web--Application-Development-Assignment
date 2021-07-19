@@ -70,7 +70,7 @@
 				font-size: 12px;
 				font-family: inherit;
 			}
-	</style>
+</style>
 	<script type="text/javascript">
 		function WHR() {
 			var h=document.getElementById('h').value;
